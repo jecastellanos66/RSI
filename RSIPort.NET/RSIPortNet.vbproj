@@ -1,0 +1,184 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <MyType>WindowsForms</MyType>
+    <ProductVersion>8.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{DCF5B065-87FD-4BEC-85C4-EAC805C0B295}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <AssemblyName>RSIPortNet</AssemblyName>
+    <OutputType>WinExe</OutputType>
+    <AssemblyMajorVersion>3</AssemblyMajorVersion>
+    <AssemblyMinorVersion>0</AssemblyMinorVersion>
+    <AssemblyRevisionNumber>0</AssemblyRevisionNumber>
+    <GenerateRevisionNumber>False</GenerateRevisionNumber>
+    <AssemblyCompanyName>Teleview Racing Patrol</AssemblyCompanyName>
+    <StartWithIE>False</StartWithIE>
+    <RootNamespace>RSIPortNet</RootNamespace>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <OutputPath>.\bin\</OutputPath>
+    <DocumentationFile>RSIPortNet.xml</DocumentationFile>
+    <DebugSymbols>True</DebugSymbols>
+    <DefineDebug>True</DefineDebug>
+    <DefineTrace>True</DefineTrace>
+    <DefineConstants>Win32=True</DefineConstants>
+    <PlatformTarget>x86</PlatformTarget>
+    <NoWarn>42353,42354,42355</NoWarn>
+    <DebugType>full</DebugType>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <OutputPath>.\bin\</OutputPath>
+    <DocumentationFile>RSIPortNet.xml</DocumentationFile>
+    <DebugSymbols>False</DebugSymbols>
+    <DefineDebug>False</DefineDebug>
+    <DefineTrace>True</DefineTrace>
+    <DefineConstants>Win32=True</DefineConstants>
+    <PlatformTarget>x86</PlatformTarget>
+    <NoWarn>42353,42354,42355</NoWarn>
+    <DebugType>none</DebugType>
+    <WarningsAsErrors>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036</WarningsAsErrors>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>On</OptionStrict>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic.Compatibility">
+      <Name>Microsoft.VisualBasic.Compatibility</Name>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.Compatibility.Data">
+      <Name>Microsoft.VisualBasic.Compatibility.Data</Name>
+    </Reference>
+    <Reference Include="System">
+      <Name>System</Name>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Data">
+      <Name>System.Data</Name>
+    </Reference>
+    <Reference Include="System.Drawing">
+      <Name>System.Drawing</Name>
+    </Reference>
+    <Reference Include="System.Windows.Forms">
+      <Name>System.Windows.Forms</Name>
+    </Reference>
+    <Reference Include="System.XML">
+      <Name>System.XML</Name>
+    </Reference>
+    <COMReference Include="ccrpTimers6">
+      <Guid>{42F1591E-830C-11D2-BBDE-0055003B26DE}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="IniFile">
+      <Guid>{B2BB6F0C-30BC-11D4-9820-000021F53B1B}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="MSCommLib">
+      <Guid>{648A5603-2C6E-101B-82B6-000000000014}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>1</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="MSDATASRC">
+      <Guid>{7C0FFAB0-CD84-11D0-949A-00A0C91110ED}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="RSIData">
+      <Guid>{46834573-D74C-40B4-BB18-FEB041DD8AAF}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="RSIService">
+      <Guid>{C7C02DFE-4FAD-42F4-9BC7-FDF613171E2A}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="Scripting">
+      <Guid>{420B2830-E718-11CF-893D-00A0C9054228}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>tlbimp</WrapperTool>
+    </COMReference>
+    <COMReference Include="stdole">
+      <Guid>{00020430-0000-0000-C000-000000000046}</Guid>
+      <Lcid>0</Lcid>
+      <VersionMajor>2</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <WrapperTool>primary</WrapperTool>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="Microsoft.VisualBasic.Compatibility" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Windows.Forms" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.vb" />
+    <Compile Include="clsCommSvr.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsCommTimer.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsCommTote.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsINI_RW.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsTimer.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="clsTimer2.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="modGeneral.vb">
+      <SubType>Code</SubType>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="_UpgradeReport.htm">
+      <SubType>Preview</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="My Project\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <PropertyGroup>
+    <PreBuildEvent>
+    </PreBuildEvent>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+</Project>
