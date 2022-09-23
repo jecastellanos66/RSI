@@ -3136,7 +3136,7 @@ Public Class frmMain
             'ro4 is in segment 7, 01000000 or 64d
             'intHsegment1to8_1 = intHsegment1to8_1 + Me.intSegmentHexPositionCollection("K" & 7)
 
-            intFlash1to8 += 172 '172 = seventh (64) and eighth (128) digits
+            intFlash1to8 += 192 '192 = seventh (64) and eighth (128) digits
         End If
         '
         Try
@@ -3144,8 +3144,10 @@ Public Class frmMain
             strPort = strPort.Substring(strPort.Length - 2)
 
             Hsegment1to8_1 = ("0" & Hex(intHsegment1to8_1))
+            Hsegment1to8_1 = Hsegment1to8_1.Substring(Hsegment1to8_1.Length - 2)
 
             Flash1to8 = ("0" & Hex(intFlash1to8))
+            Flash1to8 = Flash1to8.Substring(Flash1to8.Length - 2)
 
             myDataToSend = String.Format("{0}{1}{2}{3}{4}{5}{6}{7}{8}{9}{10}{11}{12}{13}{14}{15}{16}{17}0000000000000000{18}0000",
                                                  SOH, strPort, BoardControl, BoardDimming, PayloadType,
@@ -5439,6 +5441,7 @@ Public Class frmMain
 
                     If Not flashingRunners Is Nothing Then
                         Dim strTemp As String = ""
+                        p_blnUpdateManually = False
                         For i As Integer = 0 To flashingRunners.Length - 1
                             If Not flashingRunners(i) Is Nothing Then
                                 strTemp = flashingRunners(i).Trim.ToUpper()
@@ -5453,6 +5456,7 @@ Public Class frmMain
                                 End If
                             End If
                         Next
+                        p_blnUpdateManually = True
                     End If
                 Catch ex As Exception
                     p_blnUpdateManually = True
